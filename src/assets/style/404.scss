@@ -1,0 +1,44 @@
+@import 'system';
+
+.pageNotFound{
+  text-align: center;
+  margin: auto;
+  padding-top: 300px;
+  .output{
+    width: 240px;
+    margin: auto;
+  .Ku{
+    display: inline-block;
+    vertical-align: middle;
+    a{
+      color: $default_color;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 32px;
+      font-weight: bold;
+      margin: 5px;
+      &:hover{
+        color: $primary_color;
+      }
+    }
+  }
+}
+  .ku-animation-enter-active{
+    animation: ku-animation .5s
+  }
+  .ku-animation-leave-active{
+    animation: ku-animation .5s revers
+  }
+
+  @keyframes ku-animation{
+    0%{
+      transform: scale(0)
+    }
+    50%{
+      transform: scale(1.5)
+    }
+    100{
+      transform: scale(1)
+    }
+  }
+}
