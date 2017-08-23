@@ -9,8 +9,7 @@ const mutations = {
 }
 
 const actions = {
-  auth ({ commit }, { email, password, repassword }){
-      if (password === repassword || !repassword) {
+  auth ({ commit }, { email, password }){
         axios.post('/api/auth', {
           email, password
         }).then((res) => {
@@ -18,9 +17,6 @@ const actions = {
         }).catch((err) => {
           console.log(err);
         })
-      } else {
-        console.log('ERR');
-      }
   }
 }
 
